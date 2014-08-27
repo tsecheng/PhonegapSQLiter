@@ -22,14 +22,14 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/PhonegapSQLiter.java" target-dir="src/net/orworks/PhonegapSQLiter" />      
+        <source-file src="src/android/PhonegapSQLiter.java" target-dir="src/net/orworks/PhonegapPlugins" />      
      </platform> 
 
      <!-- iOS -->
      <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="SQLiteShell">
-                <param name="ios-package" value="PhonegapSQLiter" />
+                <param name="ios-package" value="PhonegapPlugins" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
