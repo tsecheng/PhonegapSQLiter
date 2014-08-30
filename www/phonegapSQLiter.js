@@ -11,7 +11,7 @@ var SQLiteShell =
     */
     openDatabaseFromSD: function (fullPath, toCreate, successCallback, errorCallback)
     {
-        PhoneGap.exec(
+        cordova.exec(
             successCallback,    // Success callback from the plugin
 		    errorCallback,      // Error callback from the plugin
 		    'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
@@ -30,7 +30,7 @@ var SQLiteShell =
     */
     execQuerySingleResult: function (sql, params, successCallback, errorCallback)
     {
-        PhoneGap.exec(
+        cordova.exec(
 		    successCallback,    // Success callback from the plugin
 		    errorCallback,      // Error callback from the plugin
 		    'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
@@ -49,7 +49,7 @@ var SQLiteShell =
     */
     execQueryArrayResult: function (sql, params, successCallback, errorCallback)
     {
-        PhoneGap.exec(
+        cordova.exec(
 		    function (result)
 		    {
 		        // We get a 2D array as a string. Convert it to a 2D array of strings.
@@ -76,7 +76,7 @@ var SQLiteShell =
     */
     execQueryNoResult: function (sqlStatements, successCallback, errorCallback)
     {
-        PhoneGap.exec(
+        cordova.exec(
 		    successCallback,    // Success callback from the plugin
 		    errorCallback,      // Error callback from the plugin
 		    'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
@@ -90,7 +90,7 @@ var SQLiteShell =
     */
     closeDB: function ()
     {
-        PhoneGap.exec(
+        cordova.exec(
 	        null,    // Success callback from the plugin
 	        null,      // Error callback from the plugin
 	        'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
