@@ -1,1 +1,1 @@
-Lorem ipsum
+Samik's customize SQLite plugin

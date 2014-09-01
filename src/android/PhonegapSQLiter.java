@@ -1,4 +1,4 @@
-package net.orworks.PhonegapPlugins;
+package net.orworks.PhonegapSQLiter;
 
 import org.apache.cordova.api.*;
 import org.apache.cordova.CallbackContext;

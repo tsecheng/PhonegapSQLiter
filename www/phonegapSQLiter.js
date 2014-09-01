@@ -1,3 +1,6 @@
+cordova.define("net.orworks.PhonegapSQLiter", function(require, exports, module) { /*
+
+var exec = require('cordova/exec');
 /**
 * @return Object literal singleton instance of SQLiteShell
 */
@@ -17,7 +20,7 @@ var SQLiteShell =
 		    'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
 		    'openDatabaseFromSD', 		// Tell plugin, which action we want to perform
 		    [fullPath, toCreate ? 1 : 0] 	        // Passing list of args to the plugin
-	    );
+           );
     },
 
     /**
@@ -36,7 +39,7 @@ var SQLiteShell =
 		    'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
 		    'execQuerySingleResult', 		// Tell plugin, which action we want to perform
 		    [sql, params] 	        // Passing list of args to the plugin
-	    );
+           );
     },
 
     /**
@@ -50,8 +53,8 @@ var SQLiteShell =
     execQueryArrayResult: function (sql, params, successCallback, errorCallback)
     {
         PhoneGap.exec(
-		    function (result)
-		    {
+          function (result)
+          {
 		        // We get a 2D array as a string. Convert it to a 2D array of strings.
 		        var resultArray = eval(result);
 		        successCallback(resultArray);
@@ -60,7 +63,7 @@ var SQLiteShell =
 		    'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
 		    'execQueryArrayResult', 		// Tell plugin, which action we want to perform
 		    [sql, params] 	        // Passing list of args to the plugin
-	    );
+           );
     },
 
     /**
@@ -82,7 +85,7 @@ var SQLiteShell =
 		    'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
 		    'execQueryNoResult', 		// Tell plugin, which action we want to perform
 		    [sqlStatements] 	        // Passing list of args to the plugin
-	    );
+           );
     },
 
     /**
@@ -96,7 +99,10 @@ var SQLiteShell =
 	        'PhonegapSQLiter',   // Tell PhoneGap to run "SQLiteActivity" Plugin
 	        'closeDB', 		// Tell plugin, which action we want to perform
 	        [] 	        // Passing list of args to the plugin
-        );
+            );
     }
 };
+
 module.exports = SQLiteShell;
+
+});
